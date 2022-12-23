@@ -1,0 +1,12 @@
+{% extends "wagtailadmin/admin_base.html" %}
+{% load wagtailimages_tags %}
+
+{% block branding_favicon %}
+    {% image settings.dashboard.CustomBrandSettings.favicon width-16 as img %}
+    <link rel="shortcut icon" href="{{ img.url }}" />
+{% endblock %}
+
+
+{% block branding_title %}
+    {{ settings.dashboard.CustomBrandSettings.welcome_message }} CMS
+{% endblock %}
